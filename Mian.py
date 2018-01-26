@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 
-def p_game_description():
+def game_introduction():
     """
     Output game description
     :return: None
@@ -18,16 +18,36 @@ def p_game_description():
           "And some luck ^-^\n")
 
 
+def init_answer():
+    pass
+
+
+def game_start():
+    init_answer()
+    user_input = input("Game Start, Please input your answer:")
+    pass
+
+
+def game_run():
+    pass
+
+
+def game_over():
+    pass
+
+
 def game_main():
     # name = raw_input("What is your name?") #only on python 2.x
-    user_input = input("Game Start, Please input your answer:")
-    print("Hello " + user_input)
+    while 1:
+        game_start()
+        game_run()
+        game_over()
 
 
 if __name__ == '__main__':
-    print()
+    game_introduction()
+    game_main()
     pass
 else:
-    print(__name__)
+    print("%s", __name__)
     pass
-
