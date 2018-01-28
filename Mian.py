@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+import random
 
 def game_introduction():
     """
@@ -18,25 +18,28 @@ def game_introduction():
           "And some luck ^-^\n")
 
 
-def init_answer():
-    pass
-
-
-def game_start():
-    init_answer()
-    user_input = input("Game Start, Please input your answer:")
-    pass
-
-
-def game_run():
-    pass
-
-
-def game_over():
-    pass
-
-
 def game_main():
+    """
+    The overall framework of the game structure.
+    :return:
+    """
+    num_answer = 0
+
+    def init_answer():
+        num_answer = ''.join([str(i) for i in random.sample(range(0, 9), 4)])
+        pass
+
+    def game_start():
+        init_answer()
+        user_input = input("Game Start, Please input your answer:")
+        pass
+
+    def game_run():
+        pass
+
+    def game_over():
+        pass
+
     # name = raw_input("What is your name?") #only on python 2.x
     while 1:
         game_start()
