@@ -27,6 +27,7 @@ def game_main():
 
     def init_answer():
         num_answer = ''.join([str(i) for i in random.sample(range(0, 9), 4)])
+        print(num_answer)
         pass
 
     def game_start():
